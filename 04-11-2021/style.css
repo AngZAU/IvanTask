@@ -1,0 +1,64 @@
+body {
+    border: green solid 5px;
+    font: bold 14px Arial, sans-serif ;
+    margin: 2rem;
+}
+
+.header, .nav, .main, .footer {
+    overflow: hidden; /* Отменяем обтекание */
+    margin: 1rem;
+    border: red solid 0.25rem;
+    padding: 0.5rem;
+}
+.Hcol1 {
+    /* Цвет фона */
+    /* background-color: yellowgreen; */
+    margin-right: 75%; /* Сдвиг влево на ширину колонок 2 и 3 */
+}
+
+.Hcol11 {
+    width: calc(100% - 0.75rem);
+    border: 0.25rem solid blue;
+    height: 4rem;
+}
+
+.Hcol2, .Fcol2 {
+    /* background-color: red; */
+    width: 50%;
+    float: right; /* Обтекание слева */
+}
+
+.Hcol21, .Fcol21 {
+    width: calc(100% - 0.75rem);
+    border: 0.25rem solid blue;
+    height: 4rem;
+}
+
+
+.Hcol3, .Fcol3 {
+    /* background-color: violet; */
+    width: 25%;
+    float: right; /* Обтекание слева */
+}
+
+.Hcol31, .Fcol31 {
+    width: calc(100% - 0.75rem);
+    border: 0.25rem solid blue;
+}
+
+.Hcol31_1 {
+    border: 0.25rem solid yellow;
+    margin: 0.25rem;
+    float: left;
+}
+
+.Hcol31_2 {
+    border: 0.25rem solid yellow;
+    margin: 0.25rem;
+    float: left;
+}
+
+.Fcol31 {
+    height: 4rem;
+}
+

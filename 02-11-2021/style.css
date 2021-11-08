@@ -1,0 +1,89 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+.BDiv{
+    font: 12px Verdana;
+    border: solid 4px green;
+    float: left;
+    margin: 2rem;
+    padding: 1rem;
+    width: 800px;
+    height: 900px;
+}
+.option {
+    float: right;
+    background: red;
+    border: blue solid 4px;
+    font: bold;
+    text-align: center;
+    border-radius: 15px;
+    width: 100px;
+}
+header{
+    position: relative;
+    border: solid 4px red;
+    margin: 0 auto;
+    padding: 0.5rem;
+    height: 8rem;
+}
+
+header > div{
+    position: absolute;
+    padding: 1px;
+    margin: 1px;
+    border: solid 4px blue;
+
+}
+
+.log{
+
+    /*
+    border: solid 4px blue;
+    float: left;
+    margin-right: 0.25rem;
+    text-align: left;
+    height: 5rem;
+    */
+    left: 0px;
+    width: calc(25% - 4px);
+    background-color: darkred;
+}
+
+.banner{
+    /*
+    border: solid 4px blue;
+    float: left;
+    text-align: left;
+    height: 5rem;
+    margin-right: 0.25rem;
+     */
+    left: 25%;
+    width: 50%;
+    background-color: #EF7D55;
+
+}
+
+.pol{
+    /*
+    border: solid 4px blue;
+    float: right;
+    text-align: left;
+    height: 5rem;
+     */
+    right: 0px;
+    width: 25%;
+    background-color: #1ccfc9;
+}

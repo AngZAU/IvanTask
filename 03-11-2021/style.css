@@ -1,0 +1,43 @@
+.Dheader {
+    background-color: blue;
+    padding: 15px;
+}
+
+.Dwrapper {
+    max-width: 1000px;
+    height: 1000px;
+    margin: 0 auto;
+    outline: 2px dashed orange;
+
+}
+
+.Dcontent {
+    margin: 0;
+    position: relative;
+}
+
+.Dleft {
+    width: 22.5%; margin: 0;
+    outline: 2px dashed #009554;
+    position: absolute;
+    top: 0; left: 0;
+}
+.Dleft::after {
+    content: "|aa|";
+    display: inline-block;
+    clear: both;
+}
+.Dmain {
+    width: 50%; margin: 0;
+    outline: 2px dashed #0053ae;
+    position: absolute;
+    top: 0; left: 25%;
+}
+
+.Dright {
+    width: 22.5%; margin: 0;
+    outline: 2px dashed #dd0009;
+    position: absolute;
+    top: 0; right: 0;
+
+}

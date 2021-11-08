@@ -1,0 +1,32 @@
+    .mBody { border: solid;}
+
+    h4 {
+        margin: 0;
+    }
+
+    a:hover{
+        text-decoration: none;
+        color: darkblue;
+    }
+
+    .mDiv{
+        margin-left: 50px;
+    }
+
+    ol{
+        list-style-type: upper-roman;
+    }
+
+    ol ol.mOl_1{
+        padding: 0;
+        list-style-type: upper-alpha;
+    }
+
+    ol ol ol{
+        list-style-type: decimal;
+    }
+    ol ol ol ol#mOl_2 {
+        color: red;
+        list-style-type: lower-alpha;
+    }
+
