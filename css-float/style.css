@@ -18,71 +18,67 @@ body {
     border: red solid 0.25rem;
     padding: 0.5rem;
 }
+
 /*Раздел шапки */
 .Hcol1{
     margin-right: 75%; /* Сдвиг влево на ширину колонок 2 и 3 */
+    padding: 0.5rem;
 }
 
-.Hcol11 {
-    /*
-        width: calc(100% - 0.75rem);
-     */
+.Hcol1>.wrap::after {
+    clear: both;
+}
+
+.Hcol1>.wrap {
+    float: none;
     width: 100%;
     border: 0.25rem solid blue;
-    height: 5rem;
-    margin: -0.2rem;
+    height: 4.5rem;
 }
 
 .Hcol2, .Fcol2 {
     width: 50%;
     float: right; /* Обтекание слева */
+    padding: 0.5rem;
 }
 
-.Hcol21, .Fcol21 {
-    /*
-        width: calc(100% - 0.75rem);
+.Hcol2>.wrap::after,
+.Fcol2>.wrap::after
+{
+    clear: both;
+}
 
-     */
+.Hcol2>.wrap,
+.Fcol2>.wrap {
+    float: none;
     width: 100%;
     border: 0.25rem solid blue;
-    height: 5rem;
-    margin: -0.1rem;
+    height: 4.5rem;
 }
 
 .Hcol3, .Fcol3 {
     width: 25%;
     float: right; /* Обтекание слева */
+    padding: 0.5rem;
 }
 
-.Hcol31, .Fcol31 {
-    /*
-        width: calc(100% - 0.75rem);
+.Hcol3>.wrap::after{
+    clear: both;
+}
 
-     */
+.Hcol3>.wrap,
+.Fcol3>.wrap {
+    float: none;
     width: 100%;
     border: 0.25rem solid blue;
-    margin: -0.2rem;
-    padding: 0.4rem;
+    height: 4.5rem;
 }
 
-.Hcol31_1 {
-    /*
-    margin: -0.2rem;
-     */
+.Hcol3>.wrap>.item,
+.Fcol3>.wrap>.item
+{
     border: 0.25rem solid yellow;
-    /*
-        float: left;
-     */
-}
-
-.Hcol31_2 {
-    /*
-        margin: -0.2rem;
-     */
-    border: 0.25rem solid yellow;
-    /*
-        float: left;
-     */
+    margin: 0.25rem;
 }
 
 /*Раздел навигации*/
@@ -91,7 +87,7 @@ body {
     float: right; /* Обтекание слева */
 }
 
-.Ncol41,.Ncol31,.Ncol11, .Ncol21 {
+.Ewrap {
     /*
         width: calc(100% - 0.75rem);
      */
@@ -110,7 +106,7 @@ body {
     height: 50vh;
 }
 
-.Mcol11, .Mcol21 {
+Ewrap{
     /*
     width: calc(100% - 0.75rem);
      */
@@ -125,28 +121,22 @@ body {
 }
 
 /*Раздел подвала*/
-.Fcol31 {
+.Ewrap {
     height: 4rem;
-
 }
 
 .Fcol1 {
     margin-right: 75%;
 }
 
-.Fcol11 {
+.Ewrap {
     /*
         width: calc(100% - 0.75rem);
      */
     width: 100%;
     border: 0.25rem solid blue;
     height: 4rem;
+    /*
     overflow-y: auto;
-}
-
-.Fcol11_1, .Fcol11_2, .Fcol11_3, .Fcol11_4 {
-    border: 0.25rem solid yellow;
-    margin: 0.25rem;
-    float: left;
-    height: auto;
+     */
 }
