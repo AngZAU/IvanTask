@@ -19,124 +19,154 @@ body {
     padding: 0.5rem;
 }
 
-/*Раздел шапки */
-.Hcol1{
+/* Раздел шапки */
+.col-header__1{
     margin-right: 75%; /* Сдвиг влево на ширину колонок 2 и 3 */
     padding: 0.5rem;
 }
 
-.Hcol1>.wrap::after {
+/* отменяем float */
+.col-header__1>.wrap::after {
     clear: both;
 }
 
-.Hcol1>.wrap {
-    float: none;
+.col-header__1>.wrap {
+    float: none; /* еще раз отменяем float */
     width: 100%;
     border: 0.25rem solid blue;
     height: 4.5rem;
 }
 
-.Hcol2, .Fcol2 {
+.col-header__2, .col-foot__2 {
     width: 50%;
     float: right; /* Обтекание слева */
     padding: 0.5rem;
 }
 
-.Hcol2>.wrap::after,
-.Fcol2>.wrap::after
+.col-header__2>.wrap::after,
+.col-foot__2>.wrap::after
 {
     clear: both;
 }
 
-.Hcol2>.wrap,
-.Fcol2>.wrap {
+.col-header__2>.wrap,
+.col-foot__2>.wrap {
     float: none;
     width: 100%;
     border: 0.25rem solid blue;
     height: 4.5rem;
 }
 
-.Hcol3, .Fcol3 {
+.col-header__3, .col-foot__3 {
     width: 25%;
     float: right; /* Обтекание слева */
     padding: 0.5rem;
 }
 
-.Hcol3>.wrap::after{
+.col-header__3>.wrap::after{
     clear: both;
 }
 
-.Hcol3>.wrap,
-.Fcol3>.wrap {
+.col-header__3>.wrap,
+.col-foot__3>.wrap {
     float: none;
     width: 100%;
     border: 0.25rem solid blue;
     height: 4.5rem;
 }
 
-.Hcol3>.wrap>.item,
-.Fcol3>.wrap>.item
+.col-header__3>.wrap>.item
 {
     border: 0.25rem solid yellow;
     margin: 0.25rem;
 }
 
 /*Раздел навигации*/
-.Ncol4, .Ncol3, .Ncol2 {
+
+.col-nav__4, .col-nav__3, .col-nav__2, .col-nav__1
+{
     width: 25%;
     float: right; /* Обтекание слева */
+    padding: 0.5rem;
 }
 
-.Ewrap {
-    /*
-        width: calc(100% - 0.75rem);
-     */
+.col-nav__4>.wrap::after,
+.col-nav__3>.wrap::after,
+.col-nav__2>.wrap::after,
+.col-nav__1>.wrap::after
+{
+    clear: both;
+}
+
+.col-nav__4>.wrap,
+.col-nav__3>.wrap,
+.col-nav__2>.wrap,
+.col-nav__1>.wrap
+{
+    float: none;
     width: 100%;
     border: 0.25rem solid blue;
+    height: 2rem;
 }
 
-.Ncol1{
-    margin-right: 75%; /* Сдвиг влево на ширину колонок 1, 2 и 3 */
-}
 
 /*Раздел основного контента*/
-.Mcol1 {
+
+.col-main__2 {
+    margin-right: 75%; /* Сдвиг влево на ширину колонок 2 и 3 */
+    padding: 0.5rem;
+    height: 50vh;
+}
+.col-main__1 {
     width: 75%;
     float: right;
+    padding: 0.5rem;
     height: 50vh;
 }
 
-Ewrap{
-    /*
-    width: calc(100% - 0.75rem);
-     */
+.col-main__1 >.wrap::after,
+.col-main__2>.wrap::after {
+    clear: both;
+}
+
+.col-main__1>.wrap,
+.col-main__2>.wrap {
+    float: none;
     width: 100%;
+    height: 100%;
     border: 0.25rem solid blue;
-
 }
 
-.Mcol2 {
-    margin-right: 75%;
-    height: 50vh;
+.col-main__1>.wrap>.item {
+    border: 0.25rem solid yellow;
+    margin: 0.25rem;
+    height: 20%;
+}
+
+.col-main__1>.wrap>.item:first-child{
+    height: 75%;
 }
 
 /*Раздел подвала*/
-.Ewrap {
-    height: 4rem;
+
+.col-foot__1{
+    margin-right: 75%; /* Сдвиг влево на ширину колонок 2 и 3 */
+    padding: 0.5rem;
+}
+.col-foot__1>.wrap::after {
+    clear: both;
 }
 
-.Fcol1 {
-    margin-right: 75%;
-}
-
-.Ewrap {
-    /*
-        width: calc(100% - 0.75rem);
-     */
+.col-foot__1>.wrap {
+    float: none; /* еще раз отменяем float */
     width: 100%;
     border: 0.25rem solid blue;
-    height: 4rem;
-    /*
-    overflow-y: auto;
-     */
+    height: 4.5rem;
+    overflow-y: scroll;
+}
+
+.col-foot__1>.wrap>.item
+{
+    border: 0.25rem solid yellow;
+    margin: 0.25rem;
 }
