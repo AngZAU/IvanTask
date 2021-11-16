@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    border: green solid 5px;
+    font: bold 14px Arial, sans-serif ;
+    margin: 2rem;
+    height: 100vh;
+}
+
+.header, .nav, .main, .footer {
+    overflow: hidden; /* Отменяем обтекание */
+    margin: 1rem;
+    border: red solid 0.25rem;
+}
+
+.header {
+    position: relative;
+    height: 8rem;
+    padding: 0.5rem;
+}
+
+.header div {
+    position: absolute;
+}
+
+.col-header__1 {
+    border: blue solid 0.25rem;
+    left: 0;
+    width: 13rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    height: 6.5rem;
+}
+
+.col-header__2 {
+    border: blue solid 0.25rem;
+    left: 14rem;
+    right: 14rem;
+    height: 6.5rem;
+}
+
+.col-header__3 {
+    position: relative;
+    border: blue solid 0.25rem;
+    right: 0;
+    width: 13rem;
+    margin-right: 0.5rem;
+    height: 6.5rem;
+    padding: 0.5rem;
+}
+
+.col-header__3>.item:nth-child(1){
+    position: absolute;
+    border: yellow solid 0.25rem;
+}
+.col-header__3>.item:nth-child(2){
+    position: absolute;
+    border: yellow solid 0.25rem;
+    top: 2rem;
+}
