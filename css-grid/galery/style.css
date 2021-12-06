@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font: bold 14px Arial, sans-serif;
+    margin: 2rem;
+}
+
+.galery {
+    border: 1rem solid purple;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    text-align: center;
+}
+
+.galery li {
+    border: 0.5rem solid blue;
+    margin: 1rem;
+}
+
