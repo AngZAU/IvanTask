@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+</head>
+<body>
+<canvas id="canvas" width="1000" height="1000" style="border: 1px solid black"></canvas>
+
+
+</body>
+<script>
+/**
+1. Скорость перемещения каждого комара.
+Переменная speed для храниения скорости комара
+Установка переменной происходит в конструкторе случайным числом от 1 до 10
+Использовать переменную в методе live
+реализовать бесконечный цикл работы приложения при помощи функции setInterval
+Обьяснение
+При каждой иттерации setInterval последовательно вызывать два метода:
+1. метод live
+2. метод Draw
+
+При стадии инициализации создать столько комаров, сколько указано в
+переменной Count_Mosquito (в цикле)  
+*/
+
+const Count_Mosquito = 10;
+
+        function Mosquito(x,y) {
+
+        this.maxX = x;
+        this.maxY = y;
+
+        this.x =  Math.round((Math.random()*this.maxX));
+        this.y =  Math.round((Math.random()*this.maxY));
+    }
+
+    Mosquito.prototype = {
+        maxX:0,
+        maxY:0,
+        radius:10,
+        draw:function(ctx, strColor ){
+            ctx.fillStyle = strColor;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
+            ctx.fill();
+        }
+    }
+
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    var a = [];
+    a.push(new Mosquito(canvas.width, canvas.height));
+    a.push(new Mosquito(canvas.width, canvas.height));
+
+    function getRandomIntInclusive(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    for(var i = 0; i<a.length;i++){
+        console.dir(a[i]);
+
+        var arr = [];
+        for (var j=0;j<3;j++){
+            arr[j]= getRandomIntInclusive(0,255);
+        }
+
+        var strColor = "rgb("+arr[0]+","+arr[1]+","+arr[2]+")";
+        a[i].draw(ctx,strColor);
+    }
+
+</script>
+</html>
